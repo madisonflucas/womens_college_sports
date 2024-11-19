@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .banner {
@@ -8,10 +9,8 @@ body {
   color: #b01640;
   font-size: 4vw;
   font-weight: bold;
-  font-family: 'Quicksand';
 }
 
-/* Banner text */
 .banner-text {
   position: absolute;
   top: 40%;
@@ -25,7 +24,6 @@ body {
   margin-top: 3em;
   font-size: 3vw;
   font-weight: bold;
-  font-family: 'Quicksand';
 }
 
 .ending-text {
@@ -39,7 +37,6 @@ body {
   margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
-  font-family: 'Quicksand';
 }
 
 h1 {
@@ -52,25 +49,7 @@ p {
   font-size: 14pt;
 }
 
-a:link {
-  color: #b01640;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #b01640;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #b01640;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
+a:link, a:visited, a:hover, a:active {
   color: #b01640;
   background-color: transparent;
   text-decoration: underline;
