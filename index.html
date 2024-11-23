@@ -1,14 +1,85 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>CS 6730 Women in College Sports</title>
-  </head>
-  <body>
-      <h1>
-        Women in College Sports and Title IX
-      </h1> 
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Quicksand font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"/>
+
+        <title>CS 6730 Women in College Sports</title>
+        <style>
+            body {
+                margin: 20px;
+                font-family: 'Quicksand', sans-serif;
+                background-color: rgb(236, 216, 219);
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                padding: 50px;
+                background-color: white;
+            }
+
+            .header img {
+                width: 250px;
+                height: 240px;
+                object-fit: cover;
+                margin-left: 80px;
+            }
+
+            .header h1 {
+                font-size: 3rem;
+                color: #ce4166;
+                font-weight: bold;
+                margin-left: 40px;
+            }
+
+            .popularsports {
+                margin-top: 70px;
+                background-color: white;
+                padding: 10px;
+            }
+
+            .popularsports h2 {
+                color: #ce4166;
+            }
+
+            .secondplot {
+                background-color: white;
+            }
+
+            .thirdplot {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="https://www.shutterstock.com/image-vector/active-woman-stands-her-hands-260nw-2311442293.jpg" alt="Active Woman Image"/>
+            <h1>Women in College Sports and Title IX</h1>
+        </div>
+
+        <!-- Popular Sports plot -->
+        <div class="popularsports">
+            <h2>Which Women's Sports are Most Popular in NCAA?</h2>
+            <h3>Women's sports popularity ranking based on participation over the years for NCAA schools. Relative annual revenue is encoded by the area of circle.</h3>
+            <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-TVAUI" src="https://datawrapper.dwcdn.net/TVAUI/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="693" data-external="1"></iframe>
+            <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+        </div>
+
+        <!-- Second plot -->
+        <div class="secondplot">
+            <p>hey</p>
+        </div>
+
+        <!-- Third plot -->
+        <div class="thirdplot">
+            <p>hello</p>
+        </div>
+    </body>
 </html>
