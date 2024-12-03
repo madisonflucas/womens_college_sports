@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <!-- font import -->
+        <!-- Quicksand font import -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,42 +15,45 @@
             body {
                 margin: 20px;
                 font-family: 'Source Sans Pro', sans-serif;
-                background-color: rgb(236, 216, 219);
-            }
-        
-            .header {
-                display: flex;
-                align-items: center;
-                padding: 50px;
                 background-color: white;
             }
-        
-            .header img {
-                width: 250px;
-                height: 240px;
-                object-fit: cover;
-                margin-left: 80px;
+
+            .hero {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2.5rem;
+                height: 100vh; /* Full viewport height */
+                width: 100%; /* Full viewport width */
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+                box-sizing: border-box;
+                background-color: white; /* Optional: Set a background color */
             }
-        
-            .header h1 {
-                font-size: 3rem;
+
+            .hero img {
+                width: 50%; /* Scale image to occupy half the hero section */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* Optional: Ensure the image fills its container */
+            }
+
+            .hero h1 {
+                font-size: 4rem; /* Adjust as needed */
                 color: #ce4166;
                 font-weight: bold;
-                margin-left: 40px;
+                margin-left: 2rem; /* Adjust spacing between text and image */
             }
-        
-            /* General section styling */
+
             .section {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 margin-top: 70px;
                 background-color: white;
-                padding: 50px;
-                min-height: 200px;
+                padding: 10px;
             }
-        
-            /* Section text styling */
+
+            .section-text h2 {
+                color: #ce4166;
+            }
+
             .section-text {
                 flex: 1;
                 color: #333;
@@ -59,48 +62,29 @@
             .section-text h3 {
                 font-weight: 500;
             }
-        
-            /* Section figure styling */
-            .section-figure {
-                flex: 1.5;
-                display: flex;
-                justify-content: right;
-                align-items: right;
-            }
-        
-            .section-figure img {
-                max-width: 90%;
-                height: auto;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-            }
-        
-            h2 {
-                color: #ce4166;
-            }
-            .tableauViz {
+
+            .center {
+                margin-left: 200px;
+                margin-right: 200px;
                 width: 100%;
-                height: 500px;
-                border: none;
             }
 
-        </style>        
-        
+
+        </style>
     </head>
     <body>
-        <!-- Header -->
-        <div class="header">
-            <img src="https://www.shutterstock.com/image-vector/active-woman-stands-her-hands-260nw-2311442293.jpg" alt="Active Woman Image"/>
+        <section class="hero">
+            <img src="https://img.freepik.com/premium-vector/running-woman-vector-silhouette-female-working-out-silhouette-sport-idea-black-color-isolated_655111-20.jpg" alt="Active Woman Image"/>
             <h1>Women in College Sports</h1>
-        </div>
+        </section>
 
-        
+
         <!-- Introduction -->
         <div class="section">
             <div class="section-text">
                 <h2>Introduction</h2>
-                <h3>Women’s sports have grown in popularity in recent years, leading to more enhanced media coverage and excitement over specific athletes, but men’s sports are still overwhelmingly the face of college athletics.</h3>
-                <h3>Through this website, we hope to guide you through the recent state of women’s collegiate sports and certain discrepancies that exist between men’s and women’s teams.</h3>
+                <h3>Women’s sports have grown in popularity in recent years, with more enhanced media coverage and excitement over specific athletes, but men’s sports are still overwhelmingly the face of college sports.</h3>
+                <h3>Through this website, we hope to guide you through the recent state of women’s sports and certain discrepancies that exist between men’s and women’s college sports.</h3>
             </div>
         </div>
 
@@ -108,9 +92,9 @@
         <!-- Popular sports -->
         <div class="section">
             <div class="section-text">
-                <h2>Which Women's Sports are Most Popular in NCAA?</h2>
-                <h3> This bump chart ranks women’s college sports in terms of the total number of NCAA female athletes playing each sport each year, with area of the circle encoding relative annual revenue.</h3>
-                <p>The general landscape of women’s sports has remained fairly consistent over the last 10 years, with <b> soccer being the most popular sport for women to participate in </b>, while <b>basketball has consistently had the highest annual revenue </b>.</p>
+                <h2>What are the most popular college sports for women to play in terms of participation and revenue generated?</h2>
+                <h3>Women's sports popularity ranking based on participation over the years for NCAA schools. Relative annual revenue is encoded by the area of circle.</h3>
+                <p>The general landscape of women’s sports has remained fairly consistent over the last 10 years, with soccer being the most popular sport for women to participate in, while basketball has consistently had the highest annual revenue. The bump chart ranks women’s college sports in terms of the total number of NCAA female athletes playing each sport each year.</p>
             </div>
             <div class="section-figure">
                 <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-TVAUI" src="https://datawrapper.dwcdn.net/TVAUI/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="693" data-external="1"></iframe>
@@ -119,33 +103,46 @@
         </div>
         
 
-        <!-- Treemap -->
-        <div class="section">
-            <div class="section-figure">
-                <div class='tableauPlaceholder' id='viz1733168538407' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;division_breakdown_2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='division_breakdown_2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;division_breakdown_2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733168538407');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
-            </div>
-        </div>
-
-
         <!-- Treemap of participation and revenue -->
         <div class="section">
             <div class="section-text">
-                
-                <p>For the remainder of our narrative we will focus only on schools classified as D1 FBS. You are welcome to filter for other divisions that may be of interest to you using the exploratory tool at the bottom of our page. </p>
+                <h2>Revenue per Participant</h2>
+                <h3>When we plot women’s revenue per participant vs men’s revenue per participant, it is seen that most of the sports cluster in a particular range whereas basketball, and volleyball show a clear increase for women’s teams over the years. For the other sports, the increase if any is extremely less. The ratio of women’s team revenue per participant and men’s team revenue per participant for basketball goes from being around 1:5 to 1:4 which is a significant improvement when compared to other sports. Volleyball is the only sport for which the women’s revenue per participant exceeds significantly over men’s revenue per participant through the years. It is observed to be 52953 in 2012 and 99526 in 2022.</h3>
+            </div>
+            <div class="section-figure">
+                <div class='center' id='viz1733168538407' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;division_breakdown_2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='division_breakdown_2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;division_breakdown_2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733168538407');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
             </div>
         </div>
 
-        <div class='tableauPlaceholder' id='viz1733167762399' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dy&#47;dynamic_scatterplot&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='dynamic_scatterplot&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dy&#47;dynamic_scatterplot&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733167762399');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
-        <div class='tableauPlaceholder' id='viz1733164183976' style='position: relative'><noscript><a href='#'><img alt='static view - scatterplot ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;static_scatterplot&#47;staticview-scatterplot&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='static_scatterplot&#47;staticview-scatterplot' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;static_scatterplot&#47;staticview-scatterplot&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733164183976');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1029px';vizElement.style.height='543px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1029px';vizElement.style.height='543px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-## Need explanation of scatter plot insights here ## 
+
+        <!-- Scatterplots of D1A / FBS revenue and participation -->
+        <div class="section">
+            <div class="section-text">
+                <h2>D1A/FBS Participation and Revenue</h2>
+                <p>For the remainder of our narrative we will focus only on schools classified as D1 FBS to gain insights at a finer scale. You are welcome to filter for other divisions that may be of interest to you using the exploratory tool at the bottom of our page. </p>
+            </div>
+        </div>
+
+
+        <!-- Dynamic scatterplot -->
+        <div class="section">
+            <div class='tableauPlaceholder' id='viz1733237734001' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dy&#47;dynamic_scatterplot&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='dynamic_scatterplot&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dy&#47;dynamic_scatterplot&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733237734001');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+
+
+        <!-- Static scatterplot -->
+        <div class="section">
+            <div class='center' id='viz1733164183976' style='position: relative'><noscript><a href='#'><img alt='static view - scatterplot ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;static_scatterplot&#47;staticview-scatterplot&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='static_scatterplot&#47;staticview-scatterplot' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;st&#47;static_scatterplot&#47;staticview-scatterplot&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733164183976');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1029px';vizElement.style.height='543px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1029px';vizElement.style.height='543px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+
+
         <!-- Admission rate and participation -->
         <div class="section">
             <div class="section-text">
                 <h2>Does admission rate more strongly influence male or female participation?</h2>
-                <p> Admission rate affects male and female participation rates similarly, with both experiencing a negative relationship. </p>
             </div>
             <div class="section-figure">
-                <div class='tableauPlaceholder' id='viz1733164017376' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ad&#47;adm_participation&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='adm_participation&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ad&#47;adm_participation&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733164017376');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class='center' id='viz1733164017376' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ad&#47;adm_participation&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='adm_participation&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ad&#47;adm_participation&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733164017376');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
         </div>
 
@@ -158,23 +155,23 @@
             </div>
         </div>
 
+
         <!-- Title IX aid -->
         <div class="section">
             <div class="section-text">
                 <h2>Title IX Aid vs Participation</h2>
-                <p>Displayed are the trends in financial aid disbursement to male and female athletes, averaged for all NCAA schools each year. Most notably, we can see that <b>NCAA allocations for financial aid have increased over the past 10 years, </b> and that these allocations have increased <b>seemingly proportionately for males and females </b>. The bottom view confirms that male and female participation rates have stayed fairly consistent, at around 58% and 42% respectively, from 2012 to 2022. Due to the constraints placed by Title IX we would expect the participation proportion for each gender to be equal to the proportion of financial aid received, but we see that <b> in schools classified as D1 FBS </b>, where the most female athletes participate and generate the most revenue, <b>that women receive less financial aid than they should based on participation rates </b>, with women receiving on average across all NCAA schools closer to 44% of the financial aid allotment (when it should be closer to 46%).</p>
+                <p>Displayed are the trends in financial aid disbursement to male and female athletes, averaged for all NCAA schools each year. Most notably, we can see that NCAA allocations for financial aid have increased over the past 10 years, and that these allocations have increased seemingly proportionately for males and females. The bottom view confirms that male and female participation rates have stayed fairly consistent, at around 58% and 42% respectively. Due to the constraints placed by Title IX we would expect the participation proportion for each gender to be equal to the proportion of financial aid received, but we see that in schools classified as D1 FBS, where the most female athletes participate and generate the most revenue, that men seem to receive more financial aid than they should based on participation rates, with men receiving on average across all NCAA schools closer to 56% of the financial aid allotment (when it should be closer to 54%).</p>
             </div>
             <div class="section-figure">
-                <div class='tableauPlaceholder' id='viz1732478006986' style='position: relative'><noscript><a href='#'><img alt='Title IX Aid vs Participation ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1732478006986');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class='center' id='viz1732478006986' style='position: relative'><noscript><a href='#'><img alt='Title IX Aid vs Participation ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TitleIXAidvsParticipation&#47;TitleIXAidvsParticipation&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1732478006986');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
         </div>
 
 
         <!-- Money counter -->
         <div class="section">
+            <div class="flourish-embed flourish-number-ticker" data-src="visualisation/20584958"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20584958/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
         </div>
-        <div class="flourish-embed flourish-number-ticker" data-src="visualisation/20584958"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20584958/thumbnail" width="100%" alt="number-ticker visualization" /></noscript></div>
-        <!-- <div class='tableauPlaceholder' id='viz1733105017561' style='position: relative'><noscript><a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ai&#47;aid_disbursement&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='aid_disbursement&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ai&#47;aid_disbursement&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733105017561');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
 
 
         <!-- Dumbbell plot showing discrepancies in expected vs received financial aid for women -->
@@ -184,68 +181,28 @@
                 <p>This plot highlights the disparities in how Division I FBS schools allocate financial aid to women’s sports teams compared to expectations based on Title IX participation standards. Title IX requires that financial aid be distributed equitably, proportional to the participation rates of men and women in athletics. The top 5 most equitable schools show strong alignment between women’s athletic participation and the aid they receive. The 5 least equitable schools show significant discrepancies, revealing schools where female athletes may not be receiving their fair share of financial aid.</p>
             </div>
             <div class="section-figure">
-                <iframe title="Division I FBS Schools: Top 5 Most and Least Equitable Women's Team Aid Disbursement Relative to Title IX Participation Standards" aria-label="Range Plot" id="datawrapper-chart-lImLf" src="https://datawrapper.dwcdn.net/lImLf/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="442" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-                </script>                
+                <iframe title="Division I FBS Schools: Top 5 Most and Least Equitable Women's Team Aid Disbursement Relative to Title IX Participation Standards in 2022" aria-label="Range Plot" id="datawrapper-chart-lImLf" src="https://datawrapper.dwcdn.net/lImLf/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="442" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                </script>                </script>                
             </div>
         </div>
 
 
-        <!-- Other expenses Text -->
+        <!-- Other expenses -->
         <div class="section">
             <div class="section-text">
                 <h2>What about other expenses?</h2>
-                <h3>Title IX only dictates that financial aid disbursement be equal to participation rates, it doesn’t regulate other spending. The other largest sport-related expense is <b>operating expenses</b>. Operating expenses, also known as gameday expenses, are any costs associateed with home, away, or neutral site games including housing, meals, transportation, uniforms, and equipment for players, coachings staff, and support staff. </h3>
-            </div>
-        </div>
-
-        <!-- Operating vs Revenue Scatter -->
-        <div class="section">
-            <div class="section-text">
-                <p>For the top 5 highest revenue generating women’s sports, this scatter plot shows the relationship between average operating expenses and average revenue. Men’s and women’s basketball both have higher average operating expenses than any other sport, but they also have the largest difference in operating expenses by gender. </p>
+                <h3>Title IX only dictates that financial aid disbursement be equal to participation rates, it doesn’t regulate other spending. Elaborate on operating expenses and what all that encompasses.</h3>
             </div>
             <div class="section-figure">
-                <div class='tableauPlaceholder' id='viz1733168099213' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;op&#47;operatingvsrevenue&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='operatingvsrevenue&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;op&#47;operatingvsrevenue&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733168099213');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-            </div>
-        </div>    
-
-        
-        <!-- Beeswarm -->
-        <div class="section">
-            <div class="section-text">
-                <h2>Beeswarm Plot</h2>
-                <p> Every school classified as D1 FBS in 2022 saw their men's basketball team make significantly more 
-                    revenue than what operating expenses cost, with most men's teams making between 3 and 5 times the cost of operating.
-                    Women's basketball teams, however, see a different trend, in which many teams don't even break even with their operating expenses, as shown in the grey region.  
-                </p>
-            </div>
-            <div class="section-figure">
-                <div class="flourish-embed flourish-scatter" data-src="visualisation/20536427"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20536427/thumbnail" width="100%" alt="scatter visualization" /></noscript></div>
+                <div class='center' id='viz1733168099213' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;op&#47;operatingvsrevenue&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='operatingvsrevenue&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;op&#47;operatingvsrevenue&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733168099213');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
         </div>
 
-        <!-- Conclusion -->
-        <div class="section">
-            <div class="section-text">
-                <h2>Conclusion</h2>
-                <p> Write something really insightful about how we can look at data all we want about this issue, but at the end of the day the community culture around women's sports must change before we see an impact in revenue.</p>
-            </div>
-        </div>
+
         <!-- Exploratory -->
         <div class="section">
-            <div class="section-text">
-                <h2>Now, explore on your own!</h2>
             <div class="section-figure">
-                
-            <div class="section-figure">
-                <div class='tableauPlaceholder' id='viz1733239879249' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploratory_section&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='exploratory_section&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploratory_section&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733239879249');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else { vizElement.style.width='100%';vizElement.style.height='1877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-            </div>
-        </div>
-
-        <!-- References -->
-        <div class="section">
-            <div class="section-text">
-                <h2>References</h2>
-                <p> List references here. </p>
+                <div class='center' id='viz1733248284899' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploration_final_gbm&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='exploration_final_gbm&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploration_final_gbm&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733248284899');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else { vizElement.style.width='100%';vizElement.style.height='1877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
         </div>
     </body>
