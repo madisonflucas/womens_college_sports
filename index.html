@@ -47,7 +47,7 @@
                 font-size: 4rem;
                 color: #ce4166;
                 font-weight: bold;
-                margin-left: 2rem;
+                margin-left: 0rem;
                 margin-bottom: 1rem;
             }
 
@@ -101,6 +101,29 @@
                 margin-right: 200px;
                 width: calc(100% - 400px);
                 box-sizing: border-box;
+            }
+
+            .collapsible {
+                background-color: #eee;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #ccc;
+            }
+
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
             }
         </style>
     </head>
@@ -320,15 +343,62 @@
                 <h3>The instructions below show you how to use our exploratory tool, which you can use to investigate the data as you wish.</h3>
             </div>
 
+            <!-- Exploratory instruction images -->
             <div class="exploratory">
                 <iframe src="https://drive.google.com/file/d/1f09GuQKKwmVizyPZFtdsc0ZB5dmRDJUm/preview" width="640" height="480" allow="autoplay"></iframe>
                 <iframe src="https://drive.google.com/file/d/17_hYs4Nv-EV6AMbMepintMFZS79BA_ye/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
 
-
+            <!-- Exploratory dashboard -->
             <div class="section-figure">
                 <div class='center' id='viz1733330236367' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploration_final_gbm&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='exploration_final_gbm&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ex&#47;exploration_final_gbm&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733330236367');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='1327px';} else { vizElement.style.width='100%';vizElement.style.height='1877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
             </div>
+        </div>
+
+
+        <!-- References dropdown -->
+        <button type="button" class="collapsible">References</button>
+        <div class="content">
+            <p>
+                “Equity in Athletics Data Analysis.” Equity in Athletics, US Department of Education, ope.ed.gov/athletics/#/. Accessed 4 Dec. 2024.<br>
+                “The Origins of Title IX.” NCAA.Org, NCAA, 24 Aug. 2022, www.ncaa.org/news/2022/6/23/features-the-origins-of-title-ix.aspx.<br>
+                “What Is Title IX?” Women’s Sports Foundation, 26 Nov. 2019, www.womenssportsfoundation.org/advocacy/what-is-title-ix/.<br>
+                Icons for dynamic scatter plot:<br>
+                <a href="https://www.flaticon.com/free-icons/water-polo" title="water polo icons">Water polo icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/running-track" title="running track icons">Running track icons created by Flat Icons - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/indoor" title="indoor icons">Indoor icons created by Flat Icons - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/softball" title="softball icons">Softball icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/basketball" title="basketball icons">Basketball icons created by GOWI - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/martial-arts" title="martial arts icons">Martial arts icons created by Eucalyp - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/gymnast" title="gymnast icons">Gymnast icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/ice-hockey" title="ice hockey icons">Ice hockey icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/lacrosse" title="lacrosse icons">Lacrosse icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/rowing" title="rowing icons">Rowing icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/sailing" title="sailing icons">Sailing icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/skiing" title="skiing icons">Skiing icons created by photo3idea_studio - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/football" title="football icons">Football icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/racket" title="racket icons">Racket icons created by NT Sookruay - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/swimming" title="swimming icons">Swimming icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/track-and-field" title="track and field icons">Track and field icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/tennis" title="tennis icons">Tennis icons created by Freepik - Flaticon</a><br>
+                <a href="https://www.flaticon.com/free-icons/volleyball-player" title="Volleyball player icons">Volleyball player icons created by Freepik - Flaticon</a>
+            </p>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+            </script>
         </div>
     </body>
 </html>
